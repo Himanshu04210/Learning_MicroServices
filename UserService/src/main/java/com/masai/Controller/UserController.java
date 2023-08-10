@@ -40,7 +40,7 @@ public class UserController {
 	@GetMapping
 	public ResponseEntity<?> getAllUser() throws ResourcesNotFoundException {
 		List<Users> users = userServices.getAllUsers();
-		return ResponseEntity.status(HttpStatus.CREATED).body(users);
+		return ResponseEntity.status(HttpStatus.OK).body(users);
 		
 	}
 }	
