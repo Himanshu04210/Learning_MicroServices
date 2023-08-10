@@ -9,7 +9,7 @@ public interface UserServices {
 
     public Users registerUser(Users user);
 
-    public Users getUserById(Integer userId) throws ResourcesNotFoundException;
-    public List<Users> getAllUsers();
+    public Users getUserByEmail(String userId) throws ResourcesNotFoundException;
+    public List<Users> getAllUsers() throws ResourcesNotFoundException;
 
 }
