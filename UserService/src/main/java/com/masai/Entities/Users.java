@@ -1,8 +1,6 @@
 package com.masai.Entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
@@ -15,9 +13,12 @@ import java.util.List;
 @Entity
 @Table(name = "USERS")
 public class Users {
+    @Id
     private Integer userId;
     private String name;
     @Column(unique=true)
     private String email;
+
+    @Transient
     private List<Rating> ratings;
 }
